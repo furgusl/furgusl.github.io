@@ -1,181 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme style -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .intro {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .intro h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        .projects, .gallery, .about, .contact {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .projects h2, .gallery h2, .about h2, .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .projects .project-item, .gallery .gallery-item {
-            display: inline-block;
-            width: 200px;
-            height: 150px;
-            margin: 15px;
-            background-color: #ccc;
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .contact form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact input, .contact textarea {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact button {
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
 </head>
-
 <body>
+    <div id="card-main" class="animate__animated animate__fadeInUp">
+        <div class= "tab-container ">
+            <ul class="tab-menu">
+                <li>
+                    <a href="#" data-tab="1">
+                        <span class="fa fa-user icon"></span>
+                        <span class="menu-text">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="2">
+                        <span class="fa fa-black-tie icon"></span>
+                        <span class="menu-text">Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-tab="3">
+                        <span class="fa fa-rocket icon"></span>
+                        <span class="menu-text">Projects</span>
+                    </a>
+                </li>
+            </ul>
 
-    <header>
-        <h1>Your Name</h1>
-        <p>Computer Scientist / Developer / Designer</p>
-    </header>
+            <!-- Tab Content Profile -->
+            <div class="card-tab-content" data-content="1">
+                <div class="card-content-inner text-center">
+                    <div class="row row-bottom-padded-sm">
+                        <div class="col-md-12">
+                            <h1>Leslie Furgus</h1>
+                            <p>Specializing and passionate in <a href="#">Software Engineering</a>, <a href="#">Machine Learning</a>, and <a href="#">Data Analysis</a>, 
+                                I utilize my strong foundation in computation science to build robust software solutions, develop intelligent machine learning models, and uncover actionable insights from complex datasets.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 card-counter">
+                            <div class="card-number card-left">5</div>
+                            <div class="card-text">
+                                <h3 class="border-bottom">Years of experience in broad field of CS</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="card-social">
+                        <li><a href="#" id="contact-toggle"><i class="fa fa-envelope icon"></i></a></li>
+                        <li><a href="https://github.com/furgusl"><i class="fa fa-github icon"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/leslie-furgus-246144199/"><i class="fa fa-linkedin icon"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Contact Form Popup -->
+            <div class="contact-form" id="contact-form">
+                <a href="#" id="contact-close"><i class="fa fa-times"></i></a>
+                <form action="https://formspree.io/f/xkgglrro" method="POST">
+                    <div class="control">
+                        <input type="text" name="name" id="name" required />
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="control">
+                        <input type="email" name="email" id="email" required />
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="control">
+                        <textarea name="message" id="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="control submit">
+                        <input type="submit" value="Send Message" />
+                    </div>
+                </form>
+            </div>
+            
 
-    <nav>
-        <a href="#projects">Projects</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+            <!-- Experience Tab -->
+            <div class="card-tab-content animate__animated animate__fadeInUp" data-content="2">
+                <div class="card-content-inner">
+                    <section class="design-section">
+                        <div class="timeline">
+                            <div class="timeline-middle">
+                              <div class="timeline-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>June 2024 – Aug. 2024</h3>
+                                <h3>Operations Research Analyst</h3>
+                                <h5>DEPARTMENT OF DEFENSE - OSD CAPE <br/> Washington, DC 20301-1400</h5>
+                                <ul>
+                                    <li>
+                                        Automate extraction of 300+ Aerospace contractor reports within seconds using VBA, saving 20 hours per week of manual extraction 
+                                    </li>
+                                    <li>
+                                        Utilize Excel pivot tables to analysis and discover trends within 400+ reports to estimate future contractor's labor rates for the next 4 Years 
+                                    </li>
+                                    <li>
+                                        Provide PowerPoint briefs to DoD senior leadership to review the data findings/business requirements and prepare design documents
+                                    </li> 
+                                    <li>
+                                        Help DoD cost estimators provide better analysis to DoD senior leadership on life cycle cost estimates for major acquisition programs that typically measure in billions of dollars. 
+                                    </li> 
+                                </ul>
+                            </div>
+                          
+                            <div class="timeline-middle">
+                              <div class="timeline-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Sept. 2021 - Present </h3>
+                                <h3>FULL STACK DEVELOPER</h3>
+                                <ul>
+                                    <li>
+                                        Utilize Visual Studio Development for Front-End applications for user’s bank transactions employing HTML, PHP, CSS to enhance user experience. 
+                                    </li>
+                                    <li>
+                                        Integrated a MySQL database with PhpMyAdmin to facilitate the storage and management of 500+ user transactions.  
+                                    </li>
+                                    <li>
+                                        Leveraged Node.js to create server-side web applications to improve performance and scalability with REST APIs/Web Service. 
+                                    </li>
+                                    <li>
+                                        Implement E-commerce websites utilizing React, Angular, w/ Back-End application like MongoDB and SQLite 
+                                    </li>
+                                    <li>
+                                        Incorporated AI technology using OpenAI’s LLM functionality into customer service portals, improving user engagement and customer support response time.
+                                    </li>
+                                    <li>
+                                        Summarized 100+ articles via Web Scraping with various NLP models to be displayed on website using MongoDB 
+                                    </li>
+                                </ul>
+                            </div>
+                          
+                            <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                              </div>
+                              <div class="timeline-content">
+                                  <h3>Sept. 2021 - May 2024</h3>
+                                  <h3>CYBER SECURITY ENGINEER Intern</h3>
+                                  <ul>
+                                      <li>
+                                            Implemented password cracking techniques using tools like John the Ripper to identify weak passwords, enhancing system security protocols. 
+                                      </li>
+                                      <li>
+                                            Conducted vulnerability scanning with Nmap for identifying and prioritizing critical security flaws in ports and services on a host while researching them with through the Common Vulnerabilities and Exposures (CVE) database 
+                                      </li>
+                                      <li>
+                                            Performed network traffic analysis using Wireshark, diagnosing issues related to TCP/IP protocols, and optimizing network security configurations.
+                                      </li>
+                                      <li>
+                                            Applied cryptographic algorithms (AES, RSA) to secure communications, ensuring data confidentiality and integrity in various applications 
+                                      </li>
+                                  </ul>
+                              </div>
 
-    <section class="intro">
-        <h2>Welcome to My World</h2>
-        <p>Hi, I’m a passionate developer who loves building meaningful projects and sharing them with the world. Scroll down to explore more about me, my projects, and how you can get in touch.</p>
-    </section>
+                              <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                              </div>
+                              <div class="timeline-content">
+                                  <h3>Sept. 2023 - Dec. 2023</h3>
+                                  <h3>HIGH PERFORMANCE COMPUTING ENGINEER</h3>
+                                  <ul>
+                                      <li>
+                                            Optimize workloads for efficient CPU/GPU usage by 11% in Bash programs  
+                                      </li>
+                                      <li>
+                                            Integrate and maintain HPC cluster configuration to distributing computational load across multiple nodes 
+                                      </li>
+                                  </ul>
+                              </div>
 
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-item"></div>
-        <div class="project-item"></div>
-        <div class="project-item"></div>
-    </section>
+                              <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                              </div>
+                              <div class="timeline-content">
+                                  <h3>Sept. 2023 - Dec. 2023</h3>
+                                  <h3>DATA ANALYST</h3>
+                                  <ul>
+                                      <li>
+                                            Utilize Python and R Studio to manipulation of complex data sets to be used for data visualizations  
+                                      </li>
+                                      <li>
+                                            Create data visualizations using Tableau to enhance analytical reports readability 
+                                      </li>
+                                      <li>
+                                            Work with complex machine learning models to make accurate predictions and estimations based on data
+                                      </li>
+                                      <li>
+                                            Create a dataset of 100+ articles via Web Scraping to be used summarized various NLP models to be displayed on website using MongoDB 
+                                      </li>
+                                  </ul>
+                              </div>
 
-    <section id="gallery" class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-item"></div>
-        <div class="gallery-item"></div>
-        <div class="gallery-item"></div>
-    </section>
+                              <div class="timeline-middle">
+                                <div class="timeline-circle"></div>
+                              </div>
+                              <div class="timeline-content">
+                                  <h3>Sept. 2022 - Dec. 2022</h3>
+                                  <h3>SEASONAL SOFTWARE ENGINEER</h3>
+                                  <h5>Clio Snacks <br/>Remote</h5>
+                                  <ul>
+                                      <li>
+                                            Build an inventory management system w/ GUI for 1000+ products using SCRUM Agile tech utilizing VBA within 4-person team to increase worker efficiency by 20%
+                                      </li>
+                                      <li>
+                                            Meeting deadlines and providing weekly updates w/clients in a fast-paced environment  
+                                      </li>
+                                  </ul>
+                              </div>
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I am a skilled and dedicated software developer with a passion for creating intuitive user experiences. With expertise in both front-end and back-end development, I’m always looking for new challenges and opportunities to grow.</p>
-    </section>
+                        </div>
+                    </section>
+                </div>  
+            </div>
+            
+            <!-- Projects Tab -->
+            <div class="card-tab-content" data-content="3">
+                <div class="card-content-inner">
+                    <section class="projects">
+                        <article>
+                            <div class="project-wrapper">
+                                <figure>
+                                    <img src="img/Critical Banking.png" alt="Critical Banking" />
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form action="https://example.com/submit" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+                                </figure>
+                                <div class="project-body">
+                                    <h2>Critical Banking Website</h2>
+                                    <p>
+                                        Banking website with functional backend utilizing SQL and HTML, and PHP for the frontend. XAMPP hosts the backend on my local device so only the frontend will work. I can do a live demo of the project if interested! 
+                                    </p>
+                                    <a href="\furgusl.github.io\banking\index.html" class="read-more"> Visit Project 
+                                        <span class="sr-only">about this is some title</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <div class="project-wrapper">
+                                <figure>
+                                    <img src="img/sleep_code.png" alt="Critical Banking" />
+                                </figure>
+                                <div class="project-body">
+                                    <h2>Sleep Predictor Neural Network</h2>
+                                    <p>
+                                        Utilizing linear regression neural network from sklearn and torch to predict the sleep efficiency of a person given variable such as light percent, sleep duration, and more. The dataset is "Sleep efficiency" from kaggle. 
+                                    </p>
+                                    <a href="https://colab.research.google.com/drive/1sQhzF8rZ5tSm-og-OfNQSdETlF6kkcp3?usp=sharing" class="read-more"> Visit Project 
+                                        <span class="sr-only">about this is some title</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
+                        <article>
+                            <div class="project-wrapper">
+                                <figure>
+                                    <img src="img/text_summarizers.png" alt="Critical Banking" />
+                                </figure>
+                                <div class="project-body">
+                                    <h2>Abstractive Text Summarization Using LLM Transfomers</h2>
+                                    <p>
+                                        Develop an abstractive text summarization model using transformers that can create concise and coherent summaries for longer articles from the CNN/DailyMail dataset. Or any other articles.
+                                    </p>
+                                    <a href="https://drive.google.com/file/d/10C6aphRpPbRE1f-sZCefFICsw7XQFD2F/view?usp=sharing" class="read-more"> Visit Project 
+                                        <span class="sr-only">about this is some title</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
 
+                        <article>
+                            <div class="project-wrapper">
+                                <figure>
+                                    <img src="img/Code_Optimization.png" alt="Critical Banking" />
+                                </figure>
+                                <div class="project-body">
+                                    <h2>Code Optimization Practices</h2>
+                                    <p>
+                                        Practice high performance computing using the Principles of Loop Optimization. The language used is C.
+                                    </p>
+                                    <a href="https://colab.research.google.com/drive/16qZZlOmgW3fW2bDlfOu1AywkqqAkwuo4?usp=sharing" class="read-more"> Visit Project 
+                                        <span class="sr-only">about this is some title</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article>
+                            <div class="project-wrapper">
+                                <figure>
+                                    <img src="img/amazon.png" alt="Critical Banking" />
+                                </figure>
+                                <div class="project-body">
+                                    <h2>Data Analysis & visualizations Amazon-Sales</h2>
+                                    <p>
+                                        Discovering trends with in the Amazon Sales dataset from Kaggle.
+                                    </p>
+                                    <a href="https://colab.research.google.com/drive/1r6LbdIFeO2R54m9jxMpBztHrjfiL6DuI?usp=sharing" class="read-more"> Visit Project 
+                                        <span class="sr-only">about this is some title</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer id="card-footer">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <small>
+                            © 2025 Personal Website. All Rights Reserved. <span class="card-author">Leslie Furgus</span>
+                        </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <script>
+            // contact form
+            document.addEventListener("DOMContentLoaded", () => {
+                const contactToggle = document.getElementById("contact-toggle");
+                const contactForm = document.getElementById("contact-form");
+                const contactClose = document.getElementById("contact-close");
+
+                // Show the contact form
+                contactToggle.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    contactForm.classList.add("active");
+                });
+
+                // Hide the contact form
+                contactClose.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    contactForm.classList.remove("active");
+                });
+            });
+
+            // Initialize the first tab content dynamically
+            document.addEventListener('DOMContentLoaded', () => {
+                const firstTab = document.querySelector('.tab-menu li a[data-tab="1"]');
+                const firstContent = document.querySelector('.card-tab-content[data-content="1"]');
+
+                // Activate the first tab and its content
+                if (firstTab && firstContent) {
+                    firstTab.parentElement.classList.add('active');
+                    firstContent.classList.add('active');
+                    firstContent.style.display = 'block';
+                    resizeCard(firstContent);
+                }
+            });
+
+            // Initialize the first tab content dynamically
+            document.addEventListener('DOMContentLoaded', () => {
+                const firstTab = document.querySelector('.tab-menu li a[data-tab="1"]');
+                const firstContent = document.querySelector('.card-tab-content[data-content="1"]');
+
+                // Activate the first tab and its content
+                if (firstTab && firstContent) {
+                    firstTab.parentElement.classList.add('active');
+                    firstContent.classList.add('active');
+                    firstContent.style.display = 'block';
+                    resizeCard(firstContent);
+                }
+
+                // tabswitching - Prevent rapid tab switching
+                let cooldown = false;
+                document.querySelectorAll('.tab-menu li a').forEach(tab => {
+                    tab.addEventListener('click', function (e) {
+                        e.preventDefault();
+
+                        if (cooldown) return; // Ignore clicks during cooldown
+
+                        cooldown = true;
+                        setTimeout(() => cooldown = false, 500);
+
+                        document.querySelectorAll('.tab-menu li').forEach(tab => tab.classList.remove('active'));
+
+                        this.parentElement.classList.add('active');
+
+                        const targetTab = this.getAttribute('data-tab');
+                        const targetContent = document.querySelector(`.card-tab-content[data-content="${targetTab}"]`);
+
+                        // Animate out the current active content
+                        const activeContent = document.querySelector('.card-tab-content.active');
+
+                        const fadeSpeed = '0.4s';
+                        if (activeContent) {
+                            activeContent.style.setProperty('--animate-duration', fadeSpeed);
+                            activeContent.classList.add('animate__animated', 'animate__fadeOutDownCustom');
+                            activeContent.addEventListener('animationend', function handleFadeOut() {
+                                // Remove fade-out animation and hide content
+                                activeContent.classList.remove('animate__animated', 'animate__fadeOutDownCustom', 'active');
+                                activeContent.style.display = 'none';
+                                // Show and animate in the target content
+                                if (targetContent) {
+                                    targetContent.style.setProperty('--animate-duration', fadeSpeed); 
+                                    targetContent.style.display = 'block';
+                                    targetContent.classList.add('animate__animated', 'animate__fadeInUpCustom', 'active');
+                                    resizeCard(targetContent);
+                                }
+                                // Remove the event listener to prevent duplication
+                                activeContent.removeEventListener('animationend', handleFadeOut);
+                            });
+                        } else {
+                            // If no active content, just show and animate in the target content
+                            if (targetContent) {
+                                targetContent.style.setProperty('--animate-duration', fadeSpeed); 
+                                targetContent.style.display = 'block';
+                                targetContent.classList.add('animate__animated', 'animate__fadeInUpCustom', 'active');
+                                resizeCard(targetContent);
+                            }
+                        }        
+                    });
+                });
+
+                function resizeCard(content) {
+                    const card = document.getElementById('card-main');
+                    const contentId = content.getAttribute('data-content');
+                    const viewportWidth = window.innerWidth;
+                    const viewportHeight = window.innerHeight;
+
+                    if (contentId === "1") {
+                        // For Profile tab
+                        card.style.maxWidth = `760px`;
+                        card.style.height = `600px`;
+                        card.classList.remove('scrollable'); 
+                    } else if (contentId === "2") {
+                        // For Experience tab
+                        card.style.maxWidth = `900px`; 
+                        card.style.height = `${viewportHeight-50}px`;
+                        card.classList.add('scrollable');
+                    } else if (contentId === "3") {
+                        // For Projects tab
+                        card.style.maxWidth = `${viewportWidth-50}px`; 
+                        card.style.height = `${viewportHeight - 50}px`; 
+                        card.classList.add('scrollable');
+                    } 
+                    card.style.transition = 'all 0.4s ease'; // Smooth resizing transition
+                }
+            });
+        </script>
+    </div>
 </body>
-
 </html>
