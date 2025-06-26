@@ -1,38 +1,550 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  background: url('img/milky_way2 - Copy.jpg') no-repeat center center fixed; /* Add background image */
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+  @media screen and (max-width: 768px) {
+    body {
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+      
+  a {
+    color: #17e7a4;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  a:hover, a:active, a:focus {
+    color: #17e7a4;
+    outline: none;
+  }
+  
+  p {
+    margin-bottom: 1.5em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+  }
+  
+  ::-webkit-selection {
+    color: #fff;
+    background: #17e7a4;
+  }
+  
+  ::-moz-selection {
+    color: #fff;
+    background: #17e7a4;
+  }
+  
+  ::selection {
+    color: #fff;
+    background: #17e7a4;
+  }
+  
+  #card-main {
+    max-width: 760px;
+    min-height: 600px;
+    margin: 1em auto 5em auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #card-main {
+      margin: 2em .5em 5em .5em;
+    }
+  }
+  
+  .tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+  
+      
+      .tab-container .tab-menu {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 2em;
+        position: relative;
+        top: -.5em;
+        padding: 0;
+        margin: 0;
+        gap: 5px;
+      }
+      
+      .tab-container .tab-menu li {
+        display: -moz-inline-stack;
+        display: inline-block;
+        zoom: 1;
+        display: inline;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      .tab-container .tab-menu li a {
+        padding: 2em 1em 1em 1em;
+        position: relative;
+        color: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+        display: -moz-inline-stack;
+        display: inline-block;
+        zoom: 1;
+        display: inline;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+      .icon {
+        width: 30px;
+      }
+      .tab-container .tab-menu li a .icon {
+        /*display: block;*/
+        position: relative;
+        font-size: 22px;
+        bottom: 0;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+      .tab-container .tab-menu li a .menu-text {
+        display: block;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+      }
+      @media screen and (max-width: 768px) {
+        .tab-container .tab-menu li a .menu-text {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .tab-container .tab-menu li a {
+          padding: 1em .5em .5em .5em;
+        }
+      }
+      .tab-container .tab-menu li a:after {
+        position: absolute;
+        content: "";
+        height: 0;
+        background: #17e7a4;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -ms-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        border-radius: 7px;
+      }
+      .tab-container .tab-menu li a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+      .tab-container .tab-menu li a:hover .icon {
+        bottom: 10px;
+      }
+      @media screen and (max-width: 768px) {
+        .tab-container .tab-menu li a:hover .icon {
+          bottom: 0px;
+        }
+      }
+      .tab-container .tab-menu li a:hover:after {
+        height: 100%;
+      }
+      .tab-container .tab-menu li.active .icon {
+        bottom: 10px;
+      }
+      @media screen and (max-width: 768px) {
+        .tab-container .tab-menu li.active .icon {
+          bottom: 0px;
+        }
+      }
+      .tab-container .tab-menu li.active > a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .tab-container .tab-menu li.active > a:after {
+        height: 100%;
+      }
+      .tab-container .card-tab-content {
+        /*padding-left: 4em;
+        padding-right: 4em;*/
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 768px) {
+        .tab-container .card-tab-content {
+          /*padding-left: .5em;*/
+          padding-right: .5em;
+        }
+      }
+      .tab-container .card-tab-content.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .tab-container .card-tab-content .card-content-inner {
+        padding: 7em 2em 5em 2em;
+        /*float: left;*/
+        position: relative;
+      }
+      @media screen and (max-width: 768px) {
+        .tab-container .card-tab-content .card-content-inner {
+          padding: 4em .5em 5em .5em;
+        }
+      }
+      
+      figure {
+        margin-bottom: 1.5em;
+      }
+      
+      .card-counter .card-number {
+        font-size: 100px;
+        color: #17e7a4;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        line-height: .7;
+      }
+      .card-counter .card-number.card-left {
+        float: left;
+        width: 30%;
+      }
+      @media screen and (max-width: 768px) {
+        .card-counter .card-number.card-left {
+          width: 100%;
+          line-height: 1.2;
+        }
+      }
+      .card-counter .card-text {
+        float: right;
+        text-align: left;
+        width: 70%;
+      }
+      @media screen and (max-width: 768px) {
+        .card-counter .card-text {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .card-counter .card-text h3 {
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      .card-counter .card-text h3.border-bottom:after {
+        content: "";
+        width: 50px;
+      }
+      
+      .card-social {
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        clear: both;
+      }
+      .card-social li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: -moz-inline-stack;
+        display: inline-block;
+        zoom: 1;
+        display: inline;
+      }
+      .card-social li a {
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 20px;
+        display: -moz-inline-stack;
+        display: inline-block;
+        zoom: 1;
+        display: inline;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        border-radius: 7px;
+      }
+      @media screen and (max-width: 768px) {
+        .card-social li a {
+          padding: 10px 8px;
+        }
+      }
+      .card-social li a:hover {
+        color: #17e7a4;
+      }
+      .card-social li a:hover, .card-social li a:active, .card-social li a:focus {
+        outline: none;
+        text-decoration: none;
+      }
+      
+      .card-feature {
+        text-align: left;
+        width: 100%;
+        float: left;
+      }
+      .card-feature .card-icon {
+        float: left;
+        width: 10%;
+        display: block;
+        margin-top: 5px;
+      }
+      .card-feature .card-icon i {
+        color: #17e7a4;
+        font-size: 40px;
+      }
+      .card-feature .card-text {
+        float: right;
+        width: 82%;
+      }
+      @media screen and (max-width: 768px) {
+        .card-feature .card-text {
+          width: 82%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .card-feature .card-text {
+          width: 72%;
+        }
+      }
+      .card-feature .card-text h2, .card-feature .card-text h3 {
+        margin: 0;
+        padding: 0;
+      }
+      .card-feature .card-text h3 {
+        font-weight: 300;
+        margin-bottom: 10px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 20px;
+      }
+      .card-feature .card-text h2 {
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      .chart {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 30px auto;
+        position: relative;
+        text-align: center;
+      }
+      .chart span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -30px;
+        width: 100%;
+      }
+      .chart span strong {
+        display: block;
+      }
+      .chart canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      
+      #card-footer {
+        margin-top: 50px;
+        background: black;
+        clear: both;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px 20px;
+        line-height: 1.2;
+      }
+      #card-footer small {
+        font-size: 14px;
+      }
+      #card-footer .card-author {
+        display: block;
+      }
+      @media screen and (max-width: 768px) {
+        #card-footer .card-author {
+          display: -moz-inline-stack;
+          display: inline-block;
+          zoom: 1;
+          display: inline;
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        .col-xxs-12 {
+          float: none;
+          width: 100%;
+        }
+      }
+      
+      .row-bottom-padded-lg {
+        padding-bottom: 7em;
+      }
+      @media screen and (max-width: 768px) {
+        .row-bottom-padded-lg {
+          padding-bottom: 1em;
+        }
+      }
+      
+      .row-bottom-padded-md {
+        padding-bottom: 4em;
+      }
+      @media screen and (max-width: 768px) {
+        .row-bottom-padded-md {
+          padding-bottom: 1em;
+        }
+      }
+      
+      .row-bottom-padded-sm {
+        padding-bottom: 1em;
+      }
+      @media screen and (max-width: 768px) {
+        .row-bottom-padded-sm {
+          padding-bottom: 1em;
+        }
+      }
+      .tab-container .tab-menu {
+        display: flex;
+        justify-content: space-between; /* Make tabs next to each other */
+        padding: 0;
+        margin: 0;
+    }
+
+.tab-container .tab-menu li {
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tab-container .tab-menu li a {
+  color: rgba(255, 255, 255, 0.502);
+  display: block;
+  transition: 0.3s;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tab-container .tab-menu li a:hover {
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tab-container .tab-menu li.active > a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.tab-container .card-tab-content.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-@keyframes App-logo-spin {
+
+.text-center {
+  text-align: center;
+}
+
+  
+  
+@keyframes fadeInUpCustom {
   from {
-    transform: rotate(0deg);
+      opacity: 0;
+      transform: translateY(30px); /* Reduce vertical movement */
   }
   to {
-    transform: rotate(360deg);
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDownCustom {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(30px); /* Reduce vertical movement */
+  }
+}
+
+
+.animate__fadeInUpCustom {
+  animation-name: fadeInUpCustom;
+}
+
+.animate__fadeOutDownCustom {
+  animation-name: fadeOutDownCustom;
+}
+
+.animate__fadeInUpCustom,
+.animate__fadeOutDownCustom {
+  animation-duration: var(--animate-duration, 0.4s);
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUpCustom {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOutDownCustom {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
   }
 }

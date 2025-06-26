@@ -1,0 +1,81 @@
+.contact {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  z-index: 6;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  cursor: pointer;
+  text-shadow: 0 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+  .contact-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+  .contact-form.show {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+  }
+  
+  .contact-form .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.2rem;
+      color: #333;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  
+  .contact-form .control {
+      margin-bottom: 15px;
+  }
+  
+  .contact-form .control input,
+  .contact-form .control textarea {
+      width: 96%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+  }
+  
+  .contact-form .control label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+      color: #666;
+  }
+  
+  .contact-form .control.submit input {
+      background-color: #17e7a4;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+  }
+  
+  .contact-form .control.submit input:hover {
+      background-color: #14d194;
+  }
