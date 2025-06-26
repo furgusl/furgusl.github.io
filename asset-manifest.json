@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/furgusl.io/static/css/main.33d90232.css",
-    "main.js": "/furgusl.io/static/js/main.f844fb9a.js",
-    "static/js/453.0cdb7449.chunk.js": "/furgusl.io/static/js/453.0cdb7449.chunk.js",
-    "static/media/milky_way2 - Copy.jpg": "/furgusl.io/static/media/milky_way2 - Copy.1f1411735042174b9951.jpg",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/furgusl.io/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/Mandelbrot.png": "/furgusl.io/static/media/Mandelbrot.e6f4fdfce5d17c96fe53.png",
-    "static/media/Critical Banking.png": "/furgusl.io/static/media/Critical Banking.52b8c3985980feba4f0d.png",
-    "static/media/fontawesome-webfont.eot": "/furgusl.io/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/furgusl.io/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/furgusl.io/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/amazon.png": "/furgusl.io/static/media/amazon.24f75edc92455c5af5b3.png",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/furgusl.io/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/text_summarizers.png": "/furgusl.io/static/media/text_summarizers.36a60ba1d6082d5e9796.png",
-    "static/media/sleep_code.png": "/furgusl.io/static/media/sleep_code.7bed2b71a66ee1390a82.png",
-    "static/media/Code_Optimization.png": "/furgusl.io/static/media/Code_Optimization.0c86d9da421e575b22da.png",
-    "index.html": "/furgusl.io/index.html",
-    "main.33d90232.css.map": "/furgusl.io/static/css/main.33d90232.css.map",
-    "main.f844fb9a.js.map": "/furgusl.io/static/js/main.f844fb9a.js.map",
-    "453.0cdb7449.chunk.js.map": "/furgusl.io/static/js/453.0cdb7449.chunk.js.map"
+    "main.css": "/static/css/main.91303ddf.css",
+    "main.js": "/static/js/main.2ac62dfa.js",
+    "static/js/453.0cdb7449.chunk.js": "/static/js/453.0cdb7449.chunk.js",
+    "static/media/milky_way2 - Copy.jpg": "/static/media/milky_way2 - Copy.1f1411735042174b9951.jpg",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/Mandelbrot.png": "/static/media/Mandelbrot.e6f4fdfce5d17c96fe53.png",
+    "static/media/Critical Banking.png": "/static/media/Critical Banking.52b8c3985980feba4f0d.png",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/amazon.png": "/static/media/amazon.24f75edc92455c5af5b3.png",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/text_summarizers.png": "/static/media/text_summarizers.36a60ba1d6082d5e9796.png",
+    "static/media/sleep_code.png": "/static/media/sleep_code.7bed2b71a66ee1390a82.png",
+    "static/media/Code_Optimization.png": "/static/media/Code_Optimization.0c86d9da421e575b22da.png",
+    "index.html": "/index.html",
+    "main.91303ddf.css.map": "/static/css/main.91303ddf.css.map",
+    "main.2ac62dfa.js.map": "/static/js/main.2ac62dfa.js.map",
+    "453.0cdb7449.chunk.js.map": "/static/js/453.0cdb7449.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33d90232.css",
-    "static/js/main.f844fb9a.js"
+    "static/css/main.91303ddf.css",
+    "static/js/main.2ac62dfa.js"
   ]
 }
